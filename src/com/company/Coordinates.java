@@ -3,26 +3,37 @@ package com.company;
 import java.security.PrivateKey;
 
 public class Coordinates {
-    private:
-        int longitude;
-        int latitude;
-        int height;
+	private int longitude;
+	private int latitude;
+	private int height;
 
-    public:
-        public int getLongitude() {
-            return longitude;
-        }
+	public Coordinates(int longitude, int latitude, int height) {
+		this.longitude = longitude;
+		this.latitude = latitude;
+		this.height = height;
+	}
 
-        public int getLatitude() {
-            return latitude;
-        }
+	public int getLongitude() {
+		return longitude;
+	}
 
-        public int getHeight() {
-            return height;
-        }
+	public void setLongitude(int longitude) {
+		this.longitude = longitude;
+	}
 
-        ~Coordinates(int longitude, int latitude, int height) {
+	public int getLatitude() {
+		return latitude;
+	}
 
-        }
+	public void setLatitude(int latitude) {
+		this.latitude = latitude;
+	}
 
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
 }
