@@ -8,7 +8,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		AircraftFactory factory = new AircraftFactory();
-		Flyable fly;
+//		Flyable fly;
 		String file;
 		int i = 0;
 		if(args.length == 1){	// check arguments
@@ -45,5 +45,4 @@ public class Main {
 			System.out.println("Argument error");
 		}
 	}
-
 }
