@@ -1,6 +1,6 @@
-package com.company;
 
-public class Baloon extends  Aircraft implements Flyable{
+
+public class Baloon extends Aircraft implements Flyable {
 
 	private WeatherTower weatherTower;
 	private String message;
@@ -40,12 +40,17 @@ public class Baloon extends  Aircraft implements Flyable{
 		if (coordinates.getHeight() > 100) {
 			coordinates.setHeight(100);
 		}
-		LogListener.log(toString() + ": " + message);
+//		LogListener.log(toString() + ": " + message);
+		System.out.println(toString() + ": " + message);
 	}
 
 	@Override
-	public void registerTower(WeatherTower weatherTower) {
+	public void registerTower(WeatherTower weatherTower)
+	{
 		this.weatherTower = weatherTower;
+		this.weatherTower.register(this);
+
+ 		System.out.println("Baloon#" + this.name + "(" + id + ") registered to weather tower.");
 	}
 
 	@Override
@@ -53,3 +58,4 @@ public class Baloon extends  Aircraft implements Flyable{
 		return Aircraft.Baloon + super.toString();
 	}
 }
+

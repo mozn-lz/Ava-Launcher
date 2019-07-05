@@ -1,6 +1,6 @@
-package com.company;
 
-public abstract class Aircraft {
+
+public class Aircraft {
 	public static String JetPlane = "JetPlane";
 	public static String Baloon = "Baloon";
 	public static String Helicopter = "Helicopter";
@@ -26,5 +26,4 @@ public abstract class Aircraft {
 	public String toString() {
 		return "#" + name + "(" + id + ")";
 	}
-
 }

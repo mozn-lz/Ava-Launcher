@@ -1,0 +1,10 @@
+$find -name *.java > sources.txt
+$javac -sourcepath @sources.txt
+
+
+// new Coordinates(longitude, latitude, height);
+// System.out.println("type "+ type);
+// System.out.println("\tname "+ name);
+// System.out.println("\tlongitude "+ longitude);
+// System.out.println("\tlatitude "+ latitude);
+// System.out.println("\theight "+ height);

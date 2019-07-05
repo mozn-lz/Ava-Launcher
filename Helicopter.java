@@ -1,10 +1,12 @@
-package com.company;
 
-public class Helicopter extends  Aircraft implements Flyable{
+
+public class Helicopter extends Aircraft implements Flyable {
+
 	private WeatherTower weatherTower;
 	private String message;
+//	Coordinates coordinates;
 
-	protected Helicopter(String name, Coordinates coordinates) {
+	public Helicopter(String name, Coordinates coordinates) {
 		super(name, coordinates);
 	}
 
@@ -39,12 +41,17 @@ public class Helicopter extends  Aircraft implements Flyable{
 		if (coordinates.getHeight() > 100) {
 			coordinates.setHeight(100);
 		}
-		LogListener.log(toString() + ": " + message);
+//		LogListener.log(toString() + ": " + message);
+		System.out.println(toString() + ": " + message);
 	}
 
 	@Override
-	public void registerTower(WeatherTower weatherTower) {
+	public void registerTower(WeatherTower weatherTower)
+	{
 		this.weatherTower = weatherTower;
+		this.weatherTower.register(this);
+
+ 		System.out.println("Helicopter#" + this.name + "(" + id + ") registered to weather tower.");
 	}
 
 	@Override
@@ -52,3 +59,4 @@ public class Helicopter extends  Aircraft implements Flyable{
 		return Aircraft.Helicopter + super.toString();
 	}
 }
+
