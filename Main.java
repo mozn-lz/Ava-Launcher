@@ -8,7 +8,7 @@ import java.util.List;
 public class Main {
 
 	public static void main(String[] args) {
-		SimControler simControler = new SimControler();
+		WeatherTower weatherTower = new WeatherTower();
 		AircraftFactory factory = new AircraftFactory();
 		List<Flyable> aircraftList = new ArrayList<>();
 		int simLoop = 0;
@@ -44,7 +44,7 @@ public class Main {
 					}
 				}
 				reader.close();
-				simControler.simControler(aircraftList, simLoop);
+				weatherTower.simControler(aircraftList, simLoop);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

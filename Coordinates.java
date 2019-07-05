@@ -12,7 +12,7 @@ public class Coordinates {
 	}
 
 	public int getLongitude() {
-		System.out.println("\t\tlon = " + longitude);
+		// System.out.println("\t\tlon = " + longitude);
 		return longitude;
 	}
 
@@ -21,7 +21,7 @@ public class Coordinates {
 	}
 
 	public int getLatitude() {
-		System.out.println("\t\tlat = " + latitude);
+		// System.out.println("\t\tlat = " + latitude);
 		return latitude;
 	}
 
@@ -30,7 +30,7 @@ public class Coordinates {
 	}
 
 	public int getHeight() {
-		System.out.println("\t\thei = " + height);
+		// System.out.println("\t\thei = " + height);
 		return height;
 	}
 
