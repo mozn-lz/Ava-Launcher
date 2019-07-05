@@ -7,7 +7,6 @@
 ./JetPlane.java
 ./Flyable.java
 ./Coordinates.java
-./SimControler.java
 ./Tower.java
 ./Aircraft.java
 ./WeatherTower.java
