@@ -1,4 +1,10 @@
-package wethinkcode.mk.control;
+package wethinkcode.mk.vehicles;
+
+import wethinkcode.mk.vehicles.Baloon;
+import wethinkcode.mk.vehicles.Helicopter;
+import wethinkcode.mk.vehicles.JetPlane;
+import wethinkcode.mk.control.Coordinates;
+import wethinkcode.mk.control.Flyable;
 
 public class AircraftFactory {
 
@@ -19,7 +25,7 @@ public class AircraftFactory {
 				Helicopter helicopter = new Helicopter(name, new Coordinates(longitude, latitude, height));
 				return helicopter;
 			default:
-				System.out.println("Type of Flyable is not recognized.");
+				System.out.println("Error: Flyable type is not recognized.");
 				System.exit(0);
 				return null;
 		}

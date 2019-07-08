@@ -1,5 +1,7 @@
 package wethinkcode.mk.weather;
 
+import wethinkcode.mk.control.Coordinates;
+
 public class WeatherProvider {
 
 	private static WeatherProvider instance;

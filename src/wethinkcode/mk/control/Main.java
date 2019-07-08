@@ -1,13 +1,21 @@
 package wethinkcode.mk.control;
 
+import wethinkcode.mk.vehicles.AircraftFactory;
+import wethinkcode.mk.weather.WeatherTower;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 
 public class Main {
+
+//	public static CursorBuffer writer;
+	public static PrintWriter writer = null;
 
 	public static void main(String[] args) {
 		WeatherTower weatherTower = new WeatherTower();
@@ -20,15 +28,21 @@ public class Main {
 			try {
 				reader = new BufferedReader(new FileReader(args[0]));
 				String line = "";
-				while (line != null){	// line reafing loop
+
+				try {		// write file start
+					writer = new PrintWriter(new File("./simulation.txt"));
+				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+				}		//	write file
+				while (line != null){	// line reading loop
 					line = reader.readLine();
 					if (line != null) {
 						if (fileLineCount == 0) {
 							try {
 								simLoop = Integer.valueOf(line);
-								System.out.println(line);
+								// System.out.println(line);
 							} catch (IllegalArgumentException ex) {
-								System.out.println("The first line is not a number.\n Exiting...");
+								System.out.println("Error: The first line is not a number.\n Exiting...");
 								System.exit(0);
 							}
 						} else if (fileLineCount > 0) {
@@ -38,15 +52,15 @@ public class Main {
 						fileLineCount++;
 					}
 				}
-				reader.close();
+				reader.close();		// close file reader
 				weatherTower.simControler(aircraftList, simLoop);
+				writer.close();		//	close file writer
 			} catch (IOException e) {
-				System.out.print("File reading error: ");
+				System.out.print("Error 'File reading error' :: ");
 				e.printStackTrace();
 			}
 		} else {
 			System.out.println("Argument error: number of arguments is not 1.");
 		}
 	}
-
 }

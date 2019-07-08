@@ -1,27 +1,32 @@
 package wethinkcode.mk.weather;
 
+import wethinkcode.mk.control.Coordinates;
+import wethinkcode.mk.control.Flyable;
+import wethinkcode.mk.control.Tower;
+
 import java.util.List;
 
-public class WeatherTower extends Tower  {
+public class WeatherTower extends Tower {
 
 	private static boolean killAircraft = false;
 
-	void simControler(List<Flyable> aircraftList, int simLoop) {
+	public void simControler(List<Flyable> aircraftList, int simLoop) {
 
-		System.out.println("Registering Aircrafts");
+		// System.out.println("Registering Aircrafts");
 
-		for(int i = 0; i<aircraftList.size(); i++) {
+		for (int i = 0; i < aircraftList.size(); i++) {
 			aircraftList.get(i).registerTower(new WeatherTower());
 		}
-		
+
 		while (simLoop > 0) {
-			System.out.println("\n____________________________Updating Conditions: " + simLoop + "____________________________");
-			for(int i = 0; i<aircraftList.size(); i++) {
+			// System.out.println("\n____________________________Updating Conditions: " +
+			// simLoop + "____________________________");
+			for (int i = 0; i < aircraftList.size(); i++) {
 				aircraftList.get(i).updateConditions();
 
-					// System.out.println("\t\t\tkillAircraftt : " + killAircraft);
-					if (killAircraft == true) {
-					System.out.println("\t\t\t\t\t\tDeleting aircraft : " + aircraftList.get(i));
+				// System.out.println("\t\t\tkillAircraftt : " + killAircraft);
+				if (killAircraft == true) {
+					// System.out.println("\t\t\t\t\t\tDeleting aircraft : " + aircraftList.get(i));
 					aircraftList.remove(i);
 					killAircraft = false;
 				}
@@ -30,31 +35,33 @@ public class WeatherTower extends Tower  {
 		}
 	}
 
-	String changeWeather(Coordinates coordinates){
+	String changeWeather(Coordinates coordinates) {
 		return null;
 	}
-	void changeWeather(){
+
+	void changeWeather() {
 
 	}
 
 	@Override
 	public void register(Flyable flyable) {
-		// System.out.println("Tower says:" +flyable.type+ "#" +flyable.name+ "(" +flyable.id+ ") registered to weather tower.");
+		// System.out.println("Tower says:" +flyable.type+ "#" +flyable.name+ "("
+		// +flyable.id+ ") registered to weather tower.");
 		// System.out.println("Registering");
 	}
 
 	@Override
 	public void unregister(Flyable flyable) {
-		// System.out.println("Tower says:" +flyable.type+ "#" +flyable.name+ "("+flyable.id+ "landing.");
+		// System.out.println("Tower says:" +flyable.type+ "#" +flyable.name+
+		// "("+flyable.id+ "landing.");
 		// simControler.removeit();
-					killAircraft = true;
-					// System.out.println("\n\t\t\t\t\t\t****Unregistering****\n");
+		killAircraft = true;
+		// System.out.println("\n\t\t\t\t\t\t****Unregistering****\n");
 	}
 
 	@Override
 	public void conditionChanged() {
 
 	}
-
 
 }

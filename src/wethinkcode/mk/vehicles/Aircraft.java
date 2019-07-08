@@ -1,4 +1,6 @@
-package wethinkcode.mk.vehicle;
+package wethinkcode.mk.vehicles;
+
+import wethinkcode.mk.control.Coordinates;
 
 public class Aircraft {
 	public static String JetPlane = "JetPlane";
