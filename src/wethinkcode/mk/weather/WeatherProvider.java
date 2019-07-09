@@ -5,9 +5,10 @@ import wethinkcode.mk.control.Coordinates;
 public class WeatherProvider {
 
 	private static WeatherProvider instance;
-	private static String[] weather = {"FOG", "RAIN", "SNOW", "SUN"};
+	private static String[] weather = { "FOG", "RAIN", "SNOW", "SUN" };
 
-	private WeatherProvider() {}
+	private WeatherProvider() {
+	}
 
 	public static WeatherProvider getProvider() {
 		if (instance == null) {

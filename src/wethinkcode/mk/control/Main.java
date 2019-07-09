@@ -22,18 +22,18 @@ public class Main {
 		List<Flyable> aircraftList = new ArrayList<>();
 		int simLoop = 0;
 		int fileLineCount = 0;
-		if(args.length == 1){	// check arguments
+		if (args.length == 1) { // check arguments
 			BufferedReader reader;
 			try {
 				reader = new BufferedReader(new FileReader(args[0]));
 				String line = "";
 
-				try {		// write file start
+				try { // write file start
 					writer = new PrintWriter(new File("./simulation.txt"));
 				} catch (FileNotFoundException e) {
 					e.printStackTrace();
-				}		//	write file
-				while (line != null){	// line reading loop
+				} // write file
+				while (line != null) { // line reading loop
 					line = reader.readLine();
 					if (line != null) {
 						if (fileLineCount == 0) {
@@ -43,7 +43,6 @@ public class Main {
 								} else {
 									System.exit(0);
 								}
-								// System.out.println(line);
 							} catch (IllegalArgumentException ex) {
 								System.out.println("Error: The first line is not a number.\n Exiting...");
 								System.exit(0);
@@ -51,15 +50,16 @@ public class Main {
 						} else if (fileLineCount > 0) {
 							String[] parts = line.split(" ");
 							if (isInteger(parts[2]) && isInteger(parts[3]) && isInteger(parts[4])) {
-								aircraftList.add(factory.newAircraft(parts[0], parts[1], Integer.valueOf(parts[2]), Integer.valueOf(parts[3]), Integer.valueOf(parts[4])));
+								aircraftList.add(factory.newAircraft(parts[0], parts[1], Integer.valueOf(parts[2]),
+										Integer.valueOf(parts[3]), Integer.valueOf(parts[4])));
 							}
 						}
 						fileLineCount++;
 					}
 				}
-				reader.close();		// close file reader
+				reader.close(); // close file reader
 				weatherTower.simControler(aircraftList, simLoop);
-				writer.close();		//	close file writer
+				writer.close(); // close file writer
 			} catch (IOException e) {
 				System.out.print("Error 'File reading error' :: ");
 				e.printStackTrace();
@@ -71,14 +71,11 @@ public class Main {
 
 	public static boolean isInteger(String s) {
 		boolean isValidInteger = false;
-		try
-		{
-		   Integer.parseInt(s);
-		   isValidInteger = true;
-		}
-		catch (NumberFormatException e)
-		{
-		   System.out.println("Error: " + s+ " is not a number :: " + e);
+		try {
+			Integer.parseInt(s);
+			isValidInteger = true;
+		} catch (NumberFormatException e) {
+			System.out.println("Error: " + s + " is not a number :: " + e);
 		}
 		return isValidInteger;
 	}

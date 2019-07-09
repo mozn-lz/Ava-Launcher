@@ -1,7 +1,9 @@
 package wethinkcode.mk.control;
 
 public abstract class Tower {
-		public abstract void register(Flyable flyable);
-		public abstract void unregister(Flyable flyable);
-		public abstract void conditionChanged();
+	public abstract void register(Flyable flyable);
+
+	public abstract void unregister(Flyable flyable);
+
+	public abstract void conditionChanged();
 }
