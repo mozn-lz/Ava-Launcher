@@ -17,7 +17,13 @@ public class WeatherTower extends Tower {
 		for (int i = 0; i < aircraftList.size(); i++) {
 			aircraftList.get(i).registerTower(new WeatherTower());
 		}
-
+		if (simLoop < 1) {
+			System.out.println("Oh! it seams the number of simulations is less than 1, \n Dont woury about it, I'll perform a magic trick to fix it");
+			simLoop *= -1;
+			if (simLoop == 0) {
+				simLoop++;
+			}
+		}
 		while (simLoop > 0) {
 			// System.out.println("\n____________________________Updating Conditions: " +
 			// simLoop + "____________________________");

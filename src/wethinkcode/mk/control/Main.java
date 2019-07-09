@@ -14,7 +14,6 @@ import java.io.PrintWriter;
 
 public class Main {
 
-//	public static CursorBuffer writer;
 	public static PrintWriter writer = null;
 
 	public static void main(String[] args) {
@@ -39,7 +38,11 @@ public class Main {
 					if (line != null) {
 						if (fileLineCount == 0) {
 							try {
-								simLoop = Integer.valueOf(line);
+								if (isInteger(line)) {
+									simLoop = Integer.valueOf(line);
+								} else {
+									System.exit(0);
+								}
 								// System.out.println(line);
 							} catch (IllegalArgumentException ex) {
 								System.out.println("Error: The first line is not a number.\n Exiting...");
@@ -47,7 +50,9 @@ public class Main {
 							}
 						} else if (fileLineCount > 0) {
 							String[] parts = line.split(" ");
-							aircraftList.add(factory.newAircraft(parts[0], parts[1], Integer.valueOf(parts[2]), Integer.valueOf(parts[3]), Integer.valueOf(parts[4])));
+							if (isInteger(parts[2]) && isInteger(parts[3]) && isInteger(parts[4])) {
+								aircraftList.add(factory.newAircraft(parts[0], parts[1], Integer.valueOf(parts[2]), Integer.valueOf(parts[3]), Integer.valueOf(parts[4])));
+							}
 						}
 						fileLineCount++;
 					}
@@ -62,5 +67,19 @@ public class Main {
 		} else {
 			System.out.println("Argument error: number of arguments is not 1.");
 		}
+	}
+
+	public static boolean isInteger(String s) {
+		boolean isValidInteger = false;
+		try
+		{
+		   Integer.parseInt(s);
+		   isValidInteger = true;
+		}
+		catch (NumberFormatException e)
+		{
+		   System.out.println("Error: " + s+ " is not a number :: " + e);
+		}
+		return isValidInteger;
 	}
 }

@@ -21,26 +21,26 @@ public class JetPlane extends Aircraft implements Flyable {
 		switch (WeatherProvider.getProvider().getCurrentWeather(coordinates)) {
 			case "FOG":
 				coordinates.setLatitude(coordinates.getLatitude() + 1);
-				Main.writer.write("I can't see anything! It's foggy now!\n");
+				Main.writer.write("JetPlane#" + this.name + "(" + id + ") : I can't see anything! It's foggy now!\n");
 				Main.writer.flush();
 				// message = "I can't see anything! It's foggy now!";
 				break;
 			case "RAIN":
 				coordinates.setLatitude(coordinates.getLatitude() + 5);
-				Main.writer.write("It's raining!\n");
+				Main.writer.write("JetPlane#" + this.name + "(" + id + ") : It's raining!\n");
 				Main.writer.flush();
 				// message = "It's raining!";
 				break;
 			case "SNOW":
 				coordinates.setHeight(coordinates.getHeight() - 7);
-				Main.writer.write("It's freezing! Stay warm!\n");
+				Main.writer.write("JetPlane#" + this.name + "(" + id + ") : It's freezing! Stay warm!\n");
 				Main.writer.flush();
 				// message = "It's freezing! Stay warm!";
 				break;
 			case "SUN":
 				coordinates.setLatitude(coordinates.getLatitude() + 10);
 				coordinates.setHeight(coordinates.getHeight() + 2);
-				Main.writer.write("It's hot! And bright. Bring some ice!\n");
+				Main.writer.write("JetPlane#" + this.name + "(" + id + ") : It's hot! And bright. Bring some ice!\n");
 				Main.writer.flush();
 				// message = "It's hot! And bright. Bring some ice!";
 				break;
@@ -50,7 +50,7 @@ public class JetPlane extends Aircraft implements Flyable {
 		if (coordinates.getHeight() <= 0) {
 			weatherTower.unregister(this);
 			// message = "We are landing at coordinates: " + coordinates.getLongitude() + " " + coordinates.getLatitude() + " " + 0;
-			Main.writer.write("We are landing at coordinates: " + coordinates.getLongitude() + " " + coordinates.getLatitude() + " " + 0);
+			Main.writer.write("JetPlane#" + this.name + "(" + id + ") : We are landing at coordinates: " + coordinates.getLongitude() + " " + coordinates.getLatitude() + " " + 0);
 			Main.writer.flush();
 		}
 		if (coordinates.getHeight() > 100) {

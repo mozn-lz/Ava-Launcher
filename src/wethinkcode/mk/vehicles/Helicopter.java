@@ -23,26 +23,26 @@ public class Helicopter extends Aircraft implements Flyable {
 			case "FOG":
 				coordinates.setLongitude(coordinates.getLongitude() + 1);
 				// message = "I can't see anything! It's foggy now!";
-				Main.writer.write("I can't see anything! It's foggy now!\n");
+				Main.writer.write("Helicopter#" + this.name + "(" + id + ") : I can't see anything! It's foggy now!\n");
 				Main.writer.flush();
 				break;
 			case "RAIN":
 				coordinates.setLongitude(coordinates.getLongitude() + 5);
 				// message = "It's raining!";
-				Main.writer.write("It's raining!\n");
+				Main.writer.write("Helicopter#" + this.name + "(" + id + ") : It's raining!\n");
 				Main.writer.flush();
 				break;
 			case "SNOW":
 				coordinates.setHeight(coordinates.getHeight() - 12);
 				message = "It's freezing!";
-				Main.writer.write("It's freezing!\n");
+				Main.writer.write("Helicopter#" + this.name + "(" + id + ") : It's freezing!\n");
 				Main.writer.flush();
 				break;
 			case "SUN":
 				coordinates.setLongitude(coordinates.getLongitude() + 10);
 				coordinates.setHeight(coordinates.getHeight() + 2);
 				// message = "It's hot! and bright";
-				Main.writer.write("It's hot! and bright\n");
+				Main.writer.write("Helicopter#" + this.name + "(" + id + ") : It's hot! and bright\n");
 				Main.writer.flush();
 				break;
 			default:
@@ -50,7 +50,7 @@ public class Helicopter extends Aircraft implements Flyable {
 		}
 		if (coordinates.getHeight() <= 0) {
 			weatherTower.unregister(this);
-			Main.writer.write("We are landing at coordinates: " + coordinates.getLongitude() + " " + coordinates.getLatitude() + " " + 0);
+			Main.writer.write("Helicopter#" + this.name + "(" + id + ") : We are landing at coordinates: " + coordinates.getLongitude() + " " + coordinates.getLatitude() + " " + 0);
 			Main.writer.flush();
 			// message = "We are landing at coordinates: " + coordinates.getLongitude() + " " + coordinates.getLatitude() + " " + 0;
 		}

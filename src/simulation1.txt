@@ -1,0 +1,186 @@
+Baloon#B1(1) registered to weather tower.
+Baloon#B2(2) registered to weather tower.
+JetPlane#J1(3) registered to weather tower.
+Helicopter#H1(4) registered to weather tower.
+Helicopter#H2(5) registered to weather tower.
+Helicopter#H3(6) registered to weather tower.
+Baloon#B3(7) registered to weather tower.
+JetPlane#J2(8) registered to weather tower.
+Helicopter#H4(9) registered to weather tower.
+I can't see anything! It's foggy now!
+It's freezing! Stuard, bring me hot tea!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+It's watery! Give me some towel
+It's hot! And bright. Bring some ice!
+It's freezing!
+I can't see anything! It's foggy now!
+It's freezing! Stuard, bring me hot tea!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+It's watery! Give me some towel
+It's hot! And bright. Bring some ice!
+It's raining!
+I can't see anything! It's foggy now!
+It's watery! Give me some towel
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+I can't see anything! It's foggy now!
+It's hot! And bright. Bring some ice!
+It's raining!
+I can't see anything! It's foggy now!
+It's watery! Give me some towel
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+I can't see anything! It's foggy now!
+It's hot! And bright. Bring some ice!
+It's raining!
+I can't see anything! It's foggy now!
+It's watery! Give me some towel
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+I can't see anything! It's foggy now!
+It's hot! And bright. Bring some ice!
+It's raining!
+I can't see anything! It's foggy now!
+I can't see anything! It's foggy now!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+I can't see anything! It's foggy now!
+It's hot! And bright. Bring some ice!
+It's raining!
+I can't see anything! It's foggy now!
+We are landing at coordinates: 2 3 0It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+I can't see anything! It's foggy now!
+It's hot! And bright. Bring some ice!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+I can't see anything! It's foggy now!
+It's hot! And bright. Bring some ice!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+I can't see anything! It's foggy now!
+It's hot! And bright. Bring some ice!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+I can't see anything! It's foggy now!
+We are landing at coordinates: 102 22 0It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+It's hot! And bright. Bring some ice!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+It's hot! And bright. Bring some ice!
+It's raining!
+I can't see anything! It's foggy now!
+We are landing at coordinates: 1 8 0I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+It's hot! And bright. Bring some ice!
+It's raining!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+It's hot! And bright. Bring some ice!
+It's raining!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+It's hot! And bright. Bring some ice!
+It's raining!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+It's hot! And bright. Bring some ice!
+It's raining!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+It's hot! And bright. Bring some ice!
+It's raining!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+It's hot! And bright. Bring some ice!
+It's raining!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+It's hot! And bright. Bring some ice!
+It's raining!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+It's hot! And bright. Bring some ice!
+It's raining!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+It's hot! And bright. Bring some ice!
+It's raining!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+It's hot! And bright. Bring some ice!
+It's raining!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+It's hot! And bright. Bring some ice!
+It's raining!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+It's hot! And bright. Bring some ice!
+It's raining!
+It's raining!
+I can't see anything! It's foggy now!
+It's raining!
+It's hot! and bright
+It's hot! And bright. Bring some ice!
+It's raining!
